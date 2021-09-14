@@ -1,11 +1,9 @@
 name: 'CI'
-on:
-  pull_request:
+on: [push]
 jobs:
   build-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2         # checkout the repo
       - name: Run tests 
-          run: python ./my_test.py
-          shell: bash
+        uses: actions/checkout@v2         # checkout the repo
+      - run: "python ./my_test.py"
