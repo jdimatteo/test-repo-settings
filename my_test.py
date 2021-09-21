@@ -4,7 +4,7 @@ class MyTest(unittest.TestCase):
 
     def test_passes(self):
         # comment
-        self.assertTrue(True) 
+        self.assertTrue(False) 
 
 
 if __name__ == '__main__':
