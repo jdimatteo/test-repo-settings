@@ -6,4 +6,5 @@ jobs:
     steps:
       - name: Run tests 
         uses: actions/checkout@v2         # checkout the repo
+      - run: "sw_vers"
       - run: "python ./my_test.py"
