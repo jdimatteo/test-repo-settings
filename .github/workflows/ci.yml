@@ -2,7 +2,7 @@ name: 'CI'
 on: [push]
 jobs:
   build-test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Run tests 
         uses: actions/checkout@v2         # checkout the repo
