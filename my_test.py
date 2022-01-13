@@ -3,7 +3,6 @@ import unittest
 class MyTest(unittest.TestCase):
 
     def test_passes(self):
-        # comment
         self.assertTrue(True) 
 
 
