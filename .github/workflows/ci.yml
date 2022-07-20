@@ -12,6 +12,6 @@ jobs:
         uses: dorny/test-reporter@v1
         if: always() # always run even if the previous step fails
         with:
-          name: JEST Tests
+          name: Junit Tests
           path: 'test_results.xml'
-          reporter: jest-junit
+          reporter: java-junit
