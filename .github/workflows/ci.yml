@@ -6,4 +6,10 @@ jobs:
     steps:
       - name: Run tests 
         uses: actions/checkout@v2         # checkout the repo
-      - run: "python ./my_test.py"
+      - run: "pip install pytest"
+      - run: "py.test --junitxml test_results.xml my_test.py"
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2.0.0-beta.3
+        if: always()
+        with:
+          files: "test_results.xml"
