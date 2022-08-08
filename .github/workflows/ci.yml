@@ -9,7 +9,7 @@ jobs:
       - run: "pip install pytest"
       - run: "py.test --junitxml test_results.xml my_test.py"
       - name: Publish Unit Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v2.0.0-beta.3
+        uses: EnricoMi/publish-unit-test-result-action@2a60c5d47eb29cd5cc922f51bbea18e148f56203 # tag v2.0.0
         if: always()
         with:
           files: "test_results.xml"
