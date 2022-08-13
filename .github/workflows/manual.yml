@@ -8,6 +8,6 @@ on:
 jobs:
   printInputs:
     runs-on: ubuntu-latest
-      steps:
-          - run: |
-            echo "Description: ${{ github.event.inputs.description }}"
+    steps:
+    - run: |
+        echo "Description: ${{ github.event.inputs.description }}"
