@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+    inputs:
+      description:
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio diam, vulputate id sagittis vitae, sagittis interdum ex.'
+        required: true
+
+jobs:
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Description: ${{ github.event.inputs.description }}"
